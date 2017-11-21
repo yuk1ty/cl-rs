@@ -16,24 +16,22 @@ package sexpr
  * limitations under the License.
  */
 
-sealed trait SExpr
+trait SExpr
 
-//case class TTy() extends SExpr
-//
-//case class AtomTy() extends TTy
-//
-//case class NumberTy() extends AtomTy
-//
-//case class IntegerTy() extends NumberTy
-//
-//case class FunctionTy() extends AtomTy
-//
-//case class SymbolTy() extends AtomTy
-//
-//case class ListTy() extends TTy
-//
-//case class ConsTy() extends ListTy
-//
-//case class NilTy() extends ListTy
-//
-//case class SymbolNilTy() extends SymbolTy
+trait TTy extends SExpr
+
+trait AtomTy extends TTy
+
+trait NumberTy extends AtomTy
+
+trait IntegerTy extends NumberTy
+
+trait FunctionTy extends AtomTy
+
+trait SymbolTy extends AtomTy
+
+trait ListTy extends TTy
+
+trait ConsTy extends ListTy
+
+trait NilTy extends ListTy with SymbolTy

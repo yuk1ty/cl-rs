@@ -21,9 +21,7 @@ import sexpr.SExpr
 
 trait Interpreter {
 
-  def apply(symbols: Seq[SExpr]): Either[MiniLispException, String] = {
-    Left(MiniLispException("not implemented"))
-  }
+  def apply(symbols: Seq[SExpr]): Either[MiniLispException, String] = ???
 }
 
 object Interpreter extends Interpreter
